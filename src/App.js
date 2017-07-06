@@ -1,21 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+class App extends React.Component {
+    render(){
+        let cat = this.props.cat
+        return (
+          <div>
+            <Title text="Text" />
+            <NestedH1>Hello World and cat {cat} with Component heart <Heart />  bla bla</NestedH1>
+          </div>
+        )
+    }
+}
+
+const Title = (props) => <h1>Title: {props.text}</h1>
+
+const NestedH1 = (props) => <h1>{props.children}</h1>
+
+class Heart extends React.Component {
+  render(){
+    return <span>&hearts;</span>
   }
 }
 
-export default App;
+App.defaultProps = {
+  cat: 123
+}
+
+export default App
