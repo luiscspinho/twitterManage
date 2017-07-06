@@ -12,7 +12,7 @@ class GetFavouriteTweets extends React.Component {
 
     componentDidMount() {
         axios.get('http://localhost:8000/api/getFavouriteTweets/').then(res => {
-            console.log('hey', res.data)
+            console.log('data', res.data)
             this.setState({ favourites: res.data })
         }).catch(err => console.log(err))
     }
@@ -22,7 +22,10 @@ class GetFavouriteTweets extends React.Component {
             <section>
                 {this.state.favourites.map(favourite => {
                     return (
-                        <div>{favourite.id}</div>
+                        <div key={favourite.id}>
+                            Name: {favourite.text}<br/>
+                            User: {favourite.user.name}
+                        </div>
                     )
                 })}
             </section>
