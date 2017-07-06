@@ -1,0 +1,140 @@
+[
+    {
+        "created_at": "Tue Jul 04 11:01:02 +0000 2017",
+        "id": 882192522302369800,
+        "id_str": "882192522302369792",
+        "text": "My guide to Hội An, a wonderful gem in #Vietnam\n-&gt; https://t.co/Wk3RIFlqGu  &lt;- #Travel #ttot #backpacking… https://t.co/vUb6F1U0Jl",
+        "truncated": true,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "Vietnam",
+                    "indices": [
+                        39,
+                        47
+                    ]
+                },
+                {
+                    "text": "Travel",
+                    "indices": [
+                        85,
+                        92
+                    ]
+                },
+                {
+                    "text": "ttot",
+                    "indices": [
+                        93,
+                        98
+                    ]
+                },
+                {
+                    "text": "backpacking",
+                    "indices": [
+                        99,
+                        111
+                    ]
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/Wk3RIFlqGu",
+                    "expanded_url": "http://living.luispinho.me/HoiAn/",
+                    "display_url": "living.luispinho.me/HoiAn/",
+                    "indices": [
+                        54,
+                        77
+                    ]
+                },
+                {
+                    "url": "https://t.co/vUb6F1U0Jl",
+                    "expanded_url": "https://twitter.com/i/web/status/882192522302369792",
+                    "display_url": "twitter.com/i/web/status/8…",
+                    "indices": [
+                        113,
+                        136
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 505701405,
+            "id_str": "505701405",
+            "name": "Luis Pinho",
+            "screen_name": "LuisCSPinho",
+            "location": "Vale de Cambridge",
+            "description": "Just another music lover. FCPorto / Liverpool fan. Avid and addicted traveller.",
+            "url": "https://t.co/D4SbTcuLqZ",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/D4SbTcuLqZ",
+                            "expanded_url": "http://living.luispinho.me",
+                            "display_url": "living.luispinho.me",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 180,
+            "friends_count": 116,
+            "listed_count": 4,
+            "created_at": "Mon Feb 27 09:43:51 +0000 2012",
+            "favourites_count": 111,
+            "utc_offset": 3600,
+            "time_zone": "Lisbon",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 2898,
+            "lang": "pt",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "1A1B1F",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme9/bg.gif",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme9/bg.gif",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/818407799336144896/BhZB2yGQ_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/818407799336144896/BhZB2yGQ_normal.jpg",
+            "profile_link_color": "2FC2EF",
+            "profile_sidebar_border_color": "181A1E",
+            "profile_sidebar_fill_color": "252429",
+            "profile_text_color": "666666",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 1,
+        "favorite_count": 4,
+        "favorited": false,
+        "retweeted": true,
+        "possibly_sensitive": false,
+        "lang": "en"
+    }
+]
