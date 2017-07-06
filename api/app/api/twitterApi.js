@@ -28,7 +28,7 @@ function unretweet (params) {
 function getTweetHashtagKeyword (query) {
     const keyword = query.keyword || ""
     const hashtag = query.hashtag || ""
-    const param = {count: 3200, exclude_replies: true, include_rts: false} 
+    const param = {tweet_mode: "extended", count: 3200, exclude_replies: true, include_rts: false}
 
     return new Promise((resolve, reject) => {
         client.get('statuses/user_timeline', param, (error, timeline) => {            
@@ -39,7 +39,7 @@ function getTweetHashtagKeyword (query) {
 }
 
 const filterTweetsHashtag = (timeline, hashtag, keyword) => 
-    timeline.filter((elem) => elem.text.includes(hashtag) && elem.text.includes(keyword))
+    timeline.filter((elem) => elem.full_text.includes(hashtag) && elem.full_text.includes(keyword))
 
 exports.getTweetHashtagKeyword = getTweetHashtagKeyword
 exports.retweet = retweet

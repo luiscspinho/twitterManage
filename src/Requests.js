@@ -23,7 +23,7 @@ class GetFavouriteTweets extends React.Component {
                 {this.state.favourites.map(favourite => {
                     return (
                         <div key={favourite.id}>
-                            Name: {favourite.text}<br/>
+                            Name: {favourite.full_text}<br/>
                             User: {favourite.user.name}
                         </div>
                     )
