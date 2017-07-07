@@ -31,7 +31,7 @@ function getTweetHashtagKeyword (query) {
     const param = {tweet_mode: "extended", count: 3200, exclude_replies: true, include_rts: false}
 
     return new Promise((resolve, reject) => {
-        client.get('statuses/user_timeline', param, (error, timeline) => {            
+        client.get('statuses/user_timeline', param, (error, timeline) => {
             if (error) return reject(error)
             return resolve(filterTweetsHashtag(timeline, hashtag, keyword))            
         })
