@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import SearchBox from './SearchBox.js'
 
 class GetFavouriteTweets extends React.Component {
     constructor(props) {
@@ -9,38 +10,34 @@ class GetFavouriteTweets extends React.Component {
             favourites: []
         }
     }
-    
-    componentDidMount() {
+
+    getFavTweets = () => {
         axios.get('http://localhost:8000/api/getFavouriteTweets/').then(res => {
-            console.log('data', res.data)
             this.setState({ favourites: res.data })
-        }).catch(err => console.log(err))
+        }).catch(this.handleError)
     }
 
-    searchTweet = (hashtag, keyword) => {
-        console.log('hashtag ' + hashtag + ' and keyword ' + keyword)
-        axios.get('http://localhost:8000/api/getTweetHashtagKeyword?hashtag=India&keyword=Varanasi').then(res => {
-            console.log('data search tweet', res)
+    searchTweetByHashtagKeyword = (hashtag = '', keyword = '') => {
+        console.log('CLICK hashtag ' + hashtag + ' and keyword ' + keyword)
+        
+        axios.get('http://localhost:8000/api/getTweetHashtagKeyword?hashtag=' + hashtag + '&keyword=' + keyword + '').then(res => {
+            console.log('RESULT data search tweet', res)
             this.setState({ favourites: res.data })
-        }).catch(err => console.log(err))
+        }).catch(this.handleError)
     }
 
     render() {
         return (            
             <section>
-                Hashtag: <TextField /><br/>
-                keyword: <TextField /><br/>
-                <SearchButton text="Search Tweet!"
-                              hashtag="3"
-                              keyword="5"
-                              searchTweet={this.searchTweet}
-                />
+                <SearchBox searchTweetByHashtagKeyword={this.searchTweetByHashtagKeyword} 
+                           getFavTweets={this.getFavTweets}/>
+
                 <div>
                     {this.state.favourites.map(favourite => {
                         return (
                             <div key={favourite.id}>
                                 Name: {favourite.full_text}<br/>
-                                User: {favourite.user.name}
+                                User: {favourite.user.name}<br/><br/>
                             </div>
                         )
                     })}
@@ -48,19 +45,8 @@ class GetFavouriteTweets extends React.Component {
             </section>
         )
     }
-}
 
-const TextField = (props) => <input type="text" />
-
-class SearchButton extends React.Component {
-
-    render() {
-        return (
-            <button onClick={() => this.props.searchTweet(this.props.hashtag, this.props.keyword)}>
-                {this.props.text}
-            </button>            
-        )
-    }
+    handleError = (err) => console.log(err)
 }
 
 export default GetFavouriteTweets
